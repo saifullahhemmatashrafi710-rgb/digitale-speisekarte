@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span, .gold {
+    color: #d4af37;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(90deg, #111 15%, rgba(17,17,17,.75)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: clamp(45px, 7vw, 75px);
+    margin: 20px 0;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 28px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.menu {
+    padding: 90px 10%;
+    text-align: center;
+}
+
+.menu h2, .about h2 {
+    font-size: 38px;
+    margin: 15px 0 40px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.food {
+    background: #202020;
+    padding: 35px 20px;
+    border-bottom: 3px solid #d4af37;
+}
+
+.food h3 {
+    margin-bottom: 15px;
+}
+
+.food p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.food strong {
+    color: #d4af37;
+}
+
+.about {
+    background: #1c1c1c;
+    text-align: center;
+    padding: 90px 15%;
+    line-height: 1.8;
+}
+
+.about p:last-child {
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    line-height: 2;
+    color: #ccc;
+}
+
+footer h2 {
+    color: #d4af37;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 700px) {
+    header {
+        height: auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 7%;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        padding: 65px 7%;
+    }
+}
+
+.category-title {
+    text-align: left;
+    font-size: 27px;
+    color: #d4af37;
+    margin: 50px 0 20px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food {
+    background: #202020;
+    padding: 0 0 25px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.food:hover {
+    transform: translateY(-6px);
+}
+
+.food img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.food h3,
+.food p,
+.food strong {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.food h3 {
+    margin-top: 20px;
+}
+
+.food p {
+    margin-top: 12px;
+}
+
+.food strong {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 35px 0 50px;
+}
+
+.category-nav a {
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.category-nav a:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+.category-title {
+    scroll-margin-top: 25px;
+}
